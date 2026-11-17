@@ -15,7 +15,8 @@ const ENLACE_LABEL = {
     '/proyectos/cohete/': 'Conoce el cohete de agua',
     '/proyectos/cubesat/': 'Conoce el CubeSat 1U',
     '/talleres/': 'Ver las actividades 2026',
-    '/ejes/': 'Conoce la ruta de cada eje'
+    '/ejes/': 'Conoce la ruta de cada eje',
+    'https://zenith.spaceprogram.cl/': 'Prueba Zenith'
 };
 
 const escapeHtml = (text = '') =>
@@ -42,7 +43,7 @@ function renderNotas(noticias) {
                 <img src="${escapeHtml(f.src)}" alt="${escapeHtml(f.alt)}" loading="lazy">
             </button>`).join('');
         const enlace = n.enlace
-            ? `<a class="text-link" href="${escapeHtml(n.enlace)}">${escapeHtml(ENLACE_LABEL[n.enlace] || 'Ver más')} <span aria-hidden="true">→</span></a>`
+            ? `<a class="text-link" href="${escapeHtml(n.enlace)}"${/^https?:\/\//.test(n.enlace) ? ' target="_blank" rel="noopener"' : ''}>${escapeHtml(ENLACE_LABEL[n.enlace] || 'Ver más')} <span aria-hidden="true">→</span></a>`
             : '';
         return `
             <article class="nota" id="${escapeHtml(n.slug)}" data-eje="${escapeHtml(n.eje)}" data-filter-item>

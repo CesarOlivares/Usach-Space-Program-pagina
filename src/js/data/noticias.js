@@ -22,6 +22,27 @@ const foto = (url, alt) => ({ src: url.href, alt });
 
 export const noticias = [
     {
+        slug: 'zenith-semifinalistas-nasa-space-apps',
+        titulo: 'Zenith nos lleva a la semifinal del NASA Space Apps Challenge',
+        fecha: '2026-11-17',
+        eje: 'comunidad',
+        lugar: 'NASA Space Apps Challenge 2026',
+        resumen: 'Nuestra app para comparar sitios de alunizaje en el polo sur lunar quedó semifinalista. Ya está en línea: pruébala en zenith.spaceprogram.cl.',
+        cuerpo: [
+            'Quedamos semifinalistas del NASA Space Apps Challenge 2026 con Zenith, la aplicación que desarrolló un equipo de cinco integrantes del programa para el desafío de evaluar sitios de aterrizaje en el polo sur de la Luna.',
+            'El desafío pedía una herramienta simple para que planificadores de misión, docentes y público general compararan sitios y fechas de alunizaje. En el polo sur el Sol apenas se levanta sobre el horizonte y la Tierra entra y sale de la vista, así que un cambio pequeño de lugar o de fecha puede dejar a una misión sin energía o sin comunicación.',
+            'Zenith muestra la Luna en un globo 3D con más de 20 sitios de aterrizaje conocidos. Para la fecha que elijas, indica cuáles son viables según tres criterios: la luz solar para los paneles, la comunicación directa con la Tierra y la pendiente del terreno. Puedes comparar hasta cuatro sitios lado a lado, animar el paso del tiempo y buscar las mejores fechas de los próximos 30 días.',
+            'Los cálculos usan las efemérides del JPL de la NASA y el relieve medido por el altímetro láser LOLA del Lunar Reconnaissance Orbiter. La app tiene un modo simple que explica cada resultado en lenguaje llano y un modo técnico con todas las métricas, en español y en inglés.',
+            'Te invitamos a probarla: entra a zenith.spaceprogram.cl desde el computador, aprieta "Comenzar" y elige dos sitios para compararlos. El tutorial te guía en el primer recorrido. Si encuentras algo por mejorar, cuéntanos: todo comentario nos sirve para la siguiente etapa.'
+        ],
+        fotos: [
+            foto(new URL('../../assets/images/eventos/zenith-semifinal/explorar.jpg', import.meta.url), 'Vista Explorar de Zenith: el globo lunar con los sitios viables marcados en celeste'),
+            foto(new URL('../../assets/images/eventos/zenith-semifinal/intro.jpg', import.meta.url), 'Portada de Zenith: la Luna junto al título «Bienvenido a Zenith»')
+        ],
+        enlace: 'https://zenith.spaceprogram.cl/',
+        destacada: true
+    },
+    {
         slug: 'ruta-2027',
         titulo: 'Tenemos ruta: tres metas para 2027',
         fecha: '2026-11-11',
@@ -38,8 +59,7 @@ export const noticias = [
         fotos: [
             foto(new URL('../../assets/images/equipo/fundadores-2026.webp', import.meta.url), 'Los primeros integrantes del programa junto al rover')
         ],
-        enlace: '/ejes/',
-        destacada: true
+        enlace: '/ejes/'
     },
     {
         slug: 'etereo-cierra-fase-1',
